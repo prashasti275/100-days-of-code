@@ -1,0 +1,44 @@
+\\Q1: Write a program to input two numbers and display their sum.
+
+#include<stdio.h>
+
+int main(void)
+{
+   int a, b, sum;
+   printf("Enter the first number= ");
+   scanf("%d", &a);
+   printf("Enter the second number= ");
+   scanf("%d", &b);
+   
+   sum = a+b;
+   printf("sum = %d", sum);
+   return 0;
+}
+
+
+\\Q2: Write a program to input two numbers and display their sum, difference, product, and quotient.
+
+#include<stdio.h>
+
+int main(void)
+{
+   int a, b, sum, difference, quotient, product;
+   
+   printf("Enter the first number = ");
+   scanf("%d", &a); 
+   
+   printf("Enter the second number = ");
+   scanf("%d", &b);
+   
+   sum = a+b;
+   difference = a-b;
+   product = a*b;
+   quotient = a/b;
+   
+   printf("sum = %d\n", sum);
+   printf("difference = %d\n", difference);
+   printf("product = %d\n", product);
+   printf("quotient = %d\n", quotient);
+   
+   return 0;
+}
