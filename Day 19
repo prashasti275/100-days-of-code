@@ -1,0 +1,46 @@
+﻿//Q37: Write a program to find the LCM of two numbers.
+
+#include <stdio.h>
+
+int main(void)
+{
+    int a, b, lcm;
+
+    printf("Enter two numbers: \n");
+    scanf("%d %d", &a, &b);
+
+    lcm = (a > b) ? a : b;
+
+    while (lcm % a != 0 || lcm % b != 0)
+    {
+        lcm++;
+    }
+
+    printf("LCM = %d\n", lcm);
+
+    return 0;
+}
+
+
+//Q38: Write a program to find the sum of digits of a number.
+
+#include <stdio.h>
+
+int main(void)
+{
+    int n, digit, sum = 0;
+
+    printf("Enter a number: \n");
+    scanf("%d", &n);
+
+    while (n != 0)
+    {
+        digit = n % 10;
+        sum = sum + digit;
+        n = n / 10;
+    }
+
+    printf("Sum of digits = %d\n", sum);
+
+    return 0;
+}
