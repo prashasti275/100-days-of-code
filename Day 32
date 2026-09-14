@@ -1,0 +1,80 @@
+﻿//Q63: Merge two arrays.
+
+#include <stdio.h>
+
+int main(void)
+{
+    int arr1[100], arr2[100], merged[200];
+    int n1, n2, i;
+
+    printf("Enter the number of elements in first array: ");
+    scanf("%d", &n1);
+
+    printf("Enter the elements of first array\n");
+    for (i = 0; i < n1; i++)
+    {
+        scanf("%d", &arr1[i]);
+    }
+
+    printf("Enter the number of elements in second array: ");
+    scanf("%d", &n2);
+
+    printf("Enter the elements of second array\n");
+    for (i = 0; i < n2; i++)
+    {
+        scanf("%d", &arr2[i]);
+    }
+
+    for (i = 0; i < n1; i++)
+    {
+        merged[i] = arr1[i];
+    }
+
+    for (i = 0; i < n2; i++)
+    {
+        merged[n1 + i] = arr2[i];
+    }
+
+    printf("Merged array\n");
+    for (i = 0; i < n1 + n2; i++)
+    {
+        printf("%d ", merged[i]);
+    }
+
+    return 0;
+}
+
+
+//Q64: Find the digit that occurs the most times in an integer number.
+
+#include <stdio.h>
+
+int main(void)
+{
+    int n, digit, i;
+    int count[10] = {0};
+    int max = 0, most_frequent = 0;
+
+    printf("Enter an integer: \n");
+    scanf("%d", &n);
+
+    while (n != 0)
+    {
+        digit = n % 10;
+        count[digit]++;
+        n = n / 10;
+    }
+
+    for (i = 0; i < 10; i++)
+    {
+        if (count[i] > max)
+        {
+            max = count[i];
+            most_frequent = i;
+        }
+    }
+
+    printf("Digit occurring the most = %d\n", most_frequent);
+
+    return 0;
+}
